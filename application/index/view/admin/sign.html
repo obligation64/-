@@ -1,0 +1,22 @@
+{include file="common/header" title="$title" /}
+
+<h1>今天是:{$date}</h1>
+<div class="form-group">
+    <form role="form" action="{:url('sign_in')}" method="post">
+        <div class="form-group">
+        <input id="signDate" type="date" name="date" class="form-control" value={$date}>
+        </div>
+        <label for="mm">选择签到时间:</label>
+        <select class="form-control" name="part">
+            <option value="1">{$part1}</option>
+            <option value="2">{$part2}</option>
+            <option value="3">{$part3}</option>
+            <option value="4">{$part4}</option>
+            <option value="5">{$part5}</option>
+            <option value="6">{$part6}</option>
+        </select>
+        <button type="submit" class="btn btn-primary btn-block">签到</button>
+    </form>
+</div>
+
+{include file="common/footer" /}

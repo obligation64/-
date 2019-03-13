@@ -1,0 +1,20 @@
+{include file="common/header" title="$title" /}
+<div id="body">
+<div class="form-group">
+    <form role="form" action="{:url('search_thing_view')}" method="post">
+        <div class="form-group">
+            <label for="room">选择教室</label>
+            <select class="form-control" name="room" id="room">
+                <option value="c301">C301</option>
+                <option value="c302">C302</option>
+                <option value="c304">C304</option>
+                <option value="c305">C305</option>
+            </select>
+            <label for="zh">选择时间：</label>
+            <input type="date" name="date" class="form-control" placeholder="">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">查询</button>
+    </form>
+</div>
+</div>
+{include file="common/footer" /}

@@ -1,0 +1,45 @@
+{include file="common/header" title="$title" /}
+<div style="margin-top: 50px">
+    <form role="form" action="{:url('update_check')}" method="post">
+        <input type="hidden" name="id" value={$employee.id}>
+        <div class="form-group">
+            <label for="zh">学号：</label>
+            <input type="text" name="num" class="form-control" value="{$employee.num}" placeholder="学号">
+        </div>
+        <div class="form-group">
+            <label for="zh">姓名：</label>
+            <input type="text" name="name" class="form-control" value="{$employee.name}" placeholder="姓名">
+        </div>
+        <div class="form-group">
+            <label for="zh">手机：</label>
+            <input type="text" name="phone" class="form-control" value="{$employee.phone}" placeholder="手机">
+        </div>
+        <div class="form-group">
+            <label for="zh">年级：</label>
+            <input type="text" name="grade" class="form-control" value="{$employee.grade}" placeholder="年级">
+        </div>
+        <div class="form-group">
+            <label for="zh">专业：</label>
+            <input type="text" name="major" class="form-control" value="{$employee.major}" placeholder="专业">
+        </div>
+        <div class="form-group">
+            <label for="zh">生源地：</label>
+            <input type="text" name="origin" class="form-control" value="{$employee.origin}" placeholder="生源地">
+        </div>
+        <div class="form-group">
+            <label for="mm">性别：</label>
+            <label class="radio-inline">
+                <input type="radio" name="sex" value="男" {if condition="($employee.sex == '男' )"} checked>男
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="sex" value="女" {if condition="($employee.sex == '女')"} checked> 女
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="zh">生日：</label>
+            <input type="date" name="birthday" class="form-control" value="{$employee.birthday}" placeholder="">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">提交</button>
+    </form>
+</div>
+{include file="common/footer" /}

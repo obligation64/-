@@ -1,0 +1,34 @@
+{include file="common/emp_header" title="$title"/}
+<div id="body">
+    <div class="container-fluid">
+        <form role="form" action="{:url('post_thing')}" method="post" enctype="multipart/form-data">
+            <label for="date">选择日期</label>
+            <input class="form-control" type="date" name="date" value={$date} placeholder="选择日期" />
+
+            <label for="room">选择教室</label>
+            <select class="form-control" name="room" id="room">
+                <option value="c301">C301</option>
+                <option value="c302">C302</option>
+                <option value="c304">C304</option>
+                <option value="c305">C305</option>
+            </select>
+            <label for="period">选择时间段</label>
+            <select class="form-control" name="period">
+                <option value="1">第1，2节</option>
+                <option value="2">第3，4节</option>
+                <option value="3">第5，6节</option>
+                <option value="4">第7，8节</option>
+                <option value="5">第9，10节</option>
+                <option value="6">第11，12，13节</option>
+            </select>
+            <label for="what">物品名称</label>
+            <input  class="form-control" type="text" name="what" placeholder="填写物品名称"/>
+            <div class="form-group">
+                <label for="exampleInputFile">上传图片(可选)</label>
+                <input type="file" name="img" id="exampleInputFile">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">提交</button>
+        </form>
+    </div>
+</div>
+{include file="common/footer" /}

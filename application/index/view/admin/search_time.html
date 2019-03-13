@@ -1,0 +1,19 @@
+{include file="common/header" title="$title" /}
+<div id="body">
+<form role="form" action="{:url('search_time_view')}" method="post">
+    <div class="form-group">
+        <label for="mm">姓名：</label>
+        <select class="form-control" name="name">
+            {volist name="employee" id="vo"}
+            <option value='{$vo.name}'>{$vo.name} {$vo.num}</option>
+            {/volist}>
+        </select>
+        <label c for="mm">选择日期：</label>
+        <input type="month" class="form-control" name="month">
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">提交</button>
+</form>
+</div>
+
+{include file="common/footer" /}

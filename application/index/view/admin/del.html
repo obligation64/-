@@ -1,0 +1,15 @@
+{include file="common/header" title="$title" /}
+<div id="body">
+    <form role="form" action="{:url('del_check')}" method="post">
+        <div class="form-group">
+            <label for="mm">学号：</label>
+            <select class="form-control" name="num">
+                {volist name="employee" id="vo"}
+                <option value='{$vo.num}'>{$vo.num}&nbsp{$vo.name}</option>
+                {/volist}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-danger btn-block">确认删除</button>
+    </form>
+</div>
+{include file="common/footer" /}

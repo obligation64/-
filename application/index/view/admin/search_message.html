@@ -1,0 +1,18 @@
+{include file="common/header" title="$title" /}
+<div id="body">
+<table class="table table-bordered">
+    <tr class="info">
+        <td>姓名</td>
+        <td>留言</td>
+        <td>时间</td>
+    </tr>
+    {volist name="message" id="vo"}
+    <tr>
+        <td>{$vo.name}</td>
+        <td>{$vo.mes}</td>
+        <td>{$vo.time}</td>
+    </tr>
+    {/volist}
+</table>
+</div>
+{include file="common/footer" /}

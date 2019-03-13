@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>[title]</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/pintuer.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/pintuer.js"></script>
+    <script src="/js/date.js"></script>
+    <style>
+        #nav-link1{
+            width: 100%;
+            z-index: 10;
+            background-color: #000;
+            padding: 15px  0;
+        }
+        #body{
+            margin-top: 200px;
+        }
+    </style>
+    <style type="text/css">
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class=" nav nav-inline nav-big nav-right nav-menu text-big bg-inverse  fixed fixed-top" id="nav-link1">
+        <div class="navbar-head">
+            <button class="button bg icon-navicon" data-target="#navbar-big1">
+            </button>
+            <a href="#">
+                <!--<img src="/images/30.png">-->
+            </a>
+        </div>
+        <div class="navbar-body container">
+                <li class="{eq name=':request()->action()' value='index'}active{/eq}"><a href="{:url('index')}">首页</a> </li>
+                <li class="{eq name=':request()->action()' value='sign'}active{/eq}"><a href="{:url('sign')}">签到</a> </li>
+                <li class="{eq name=':request()->action()' value='time'}active{/eq}"><a href="{:url('time')}">工时查询</a> </li>
+                <li class="{eq name=':request()->action()' value='message'}active{/eq}"><a href="{:url('message')}">留言</a> </li>
+                <li class="{eq name=':request()->action()' value='thing'}active{/eq}"><a href="{:url('thing')}">登记遗失物品</a> </li>
+                <li class="active"><a href="#">{$Think.session.User}<span class="arrow"></span></a>
+                    <ul class="drop-menu">
+                        <li><a href="{:url('info')}">个人中心</a></li>
+                        <li><a href="{:url('pwd')}">修改密码</a> </li>
+                        <li><a href="{:url('index/login_out')}">退出</a> </li>
+                    </ul>
+                </li>
+        </div>
+    </div>
+<div class="container" style="margin-top: 70px;">
+    <div class="container x8 x2-left">

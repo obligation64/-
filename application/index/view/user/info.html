@@ -1,0 +1,47 @@
+{include file="common/emp_header" title="$title"/}
+
+
+
+
+    <form class="form-horizontal" action="{:url('change_info')}">
+        <input type="hidden" name="id" value={$info.id}>
+        <div class="form-group">
+            <label for="zh">学号：</label>
+            <input type="text" name="num" class="form-control" value="{$info.num}" placeholder="学号">
+        </div>
+        <div class="form-group">
+            <label for="zh">姓名：</label>
+            <input type="text" name="name" class="form-control" value="{$info.name}" placeholder="姓名">
+        </div>
+        <div class="form-group">
+            <label for="zh">手机：</label>
+            <input type="text" name="phone" class="form-control" value="{$info.phone}" placeholder="手机">
+        </div>
+        <div class="form-group">
+            <label for="zh">年级：</label>
+            <input type="text" name="grade" class="form-control" value="{$info.grade}" placeholder="年级">
+        </div>
+        <div class="form-group">
+            <label for="zh">专业：</label>
+            <input type="text" name="major" class="form-control" value="{$info.major}" placeholder="专业">
+        </div>
+        <div class="form-group">
+            <label for="zh">生源地：</label>
+            <input type="text" name="origin" class="form-control" value="{$info.origin}" placeholder="生源地">
+        </div>
+        <div class="form-group">
+            <label for="mm">性别：</label>
+                <input type="radio" name="sex" value="男" {if condition="($info.sex == '男')"} checked {/if} >男
+                <input type="radio" name="sex" value="女" {if condition="($info.sex == '女')"} checked {/if}> 女
+        </div>
+        <div class="form-group">
+            <label for="zh">生日：</label>
+            <input type="date" name="birthday" class="form-control" value="{$info.birthday}" placeholder="">
+        </div>
+        <div style="text-align: right">
+        <button type="submit" class="button bg-blue" >修改</button>
+        <button type="button" class="button" onclick="javascript:window.location.href='{:url('index')}'">返回</button>
+        </div>
+    </form>
+
+{include file="common/footer" /}

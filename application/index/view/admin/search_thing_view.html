@@ -1,0 +1,27 @@
+{include file="common/header" title="$title" /}
+<div id="body">
+<table class="table table-bordered">
+    <tr class="info">
+        <td>日期</td>
+        <td>时间段</td>
+        <td>时间</td>
+        <td>教室</td>
+        <td>物品</td>
+        <td>图片</td>
+    </tr>
+    {volist name="thing" id="vo"}
+    <tr>
+        <td>{$vo.date}</td>
+        <td>{$vo.period}</td>
+        <td>{$vo.time}</td>
+        <td>{$vo.room}</td>
+        <td>{$vo.what}</td>
+        <td>
+            <img src="/uploads/20190304/{$vo.jpg}" width="400" height="200" alt="图片"/>
+        </td>
+    </tr>
+
+    {/volist}
+</table>
+</div>
+{include file="common/footer" /}

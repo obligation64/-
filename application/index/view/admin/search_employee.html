@@ -1,0 +1,30 @@
+{include file="common/header" title="$title" /}
+<div class="padding" style="margin-top: 50px">
+    <button class="button bg-main" onclick="javascript:window.location.href='{:url('add')}'">
+        <span class="icon-plus-square-o"></span>
+        注册新员工</button>
+    <table class="table table-bordered table-striped table-hover">
+        <tr class="blue">
+            <td>学号</td>
+            <td>姓名</td>
+            <td></td>
+        </tr>
+        {volist name="employee" id="vo"}
+        <tr>
+            <td>{$vo.num}</td>
+            <td>{$vo.name}</td>
+            <td style="display: block;">
+                <form action="{:url('update')}" method="post">
+                    <input type="hidden" name="num" value={$vo.num}>
+                    <input type="submit" class="button bg-blue" value="修改">
+                </form>
+                <form action="{:url('del')}" method="post">
+                    <input type="hidden" name="num" value={$vo.num}>
+                    <input type="submit" class="button bg-red" value="删除">
+                </form>
+            </td>
+        </tr>
+        {/volist}
+    </table>
+</div>
+{include file="common/footer" /}

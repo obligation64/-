@@ -1,0 +1,306 @@
+{include file="common/header" title="$title" /}
+
+<div class="panel panel-info">
+        <div class="panel-heading" role="tab" >
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse"  href=#{$name.0}  >
+                   {$name.0}
+                </a>
+                <a style="float: right;">工时汇总：{$time["all"]} 小时</a>
+            </h4>
+        </div>
+        <div id={$name.0} class="panel-collapse collapse"  role="tabpanel" >
+                <table class="table table-bordered table-hover ">
+                    <!--<tr class="info ">-->
+                        <!--<td><a role="button" data-toggle="collapse"  href=#{$name.0}  >-->
+                            <!--{$name.0}-->
+                        <!--</a></td>-->
+                        <!--<td>打卡日期</td>-->
+                        <!--<td>打卡时间</td>-->
+                        <!--<td>上班时间</td>-->
+                    <!--</tr>-->
+                    {volist name="time" id="vo"}
+                    <tr>
+                        <td>{$vo.name}</td>
+                        <td>{$vo.date}</td>
+                        <td>{$vo.time}</td>
+                        <td>{$vo.period}</td>
+                        <td>{$vo.working}</td>
+                    </tr>
+                    {/volist}
+                </table>
+        </div>
+    </div>
+<div class="panel panel-info">
+    <div class="panel-heading" role="tab" >
+        <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href=#{$name.1} aria-expanded="true" aria-controls="collapseOne">
+               {$name.1}
+            </a>
+            <a style="float: right;">工时汇总：{$time1.all} 小时</a>
+        </h4>
+    </div>
+    <div id={$name.1} class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+            <table class="table table-bordered table-hover ">
+                <tr class="info ">
+                    <td>姓名</td>
+                    <td>打卡日期</td>
+                    <td>打卡时间</td>
+                    <td>上班时间</td>
+                    <td>工时 /小时</td>
+                </tr>
+                {volist name="time1" id="v2"}
+                <tr>
+                    <td>{$v2.name}</td>
+                    <td>{$v2.date}</td>
+                    <td>{$v2.time}</td>
+                    <td>{$v2.period}</td>
+                    <td>{$v2.working}</td>
+                </tr>
+                {/volist}
+            </table>
+    </div>
+</div>
+<div class="panel panel-info">
+    <div class="panel-heading" role="tab" >
+        <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href=#{$name.2} aria-expanded="true" aria-controls="collapseOne">
+               {$name.2}
+            </a>
+            <a style="float: right;">工时汇总：{$time2.all} 小时</a>
+        </h4>
+    </div>
+    <div id={$name.2} class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+            <table class="table table-bordered table-hover ">
+                <tr class="info ">
+                    <td>姓名</td>
+                    <td>打卡日期</td>
+                    <td>打卡时间</td>
+                    <td>上班时间</td>
+                    <td>工时 /小时</td>
+                </tr>
+                {volist name="time2" id="vi"}
+                <tr>
+                    <td>{$vi.name}</td>
+                    <td>{$vi.date}</td>
+                    <td>{$vi.time}</td>
+                    <td>{$vi.period}</td>
+                    <td>{$vi.working}</td>
+                </tr>
+                {/volist}
+            </table>
+    </div>
+</div>
+<div class="panel panel-info">
+    <div class="panel-heading" role="tab" >
+        <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href=#{$name.3} aria-expanded="true" aria-controls="collapseOne">
+               {$name.3}
+            </a>
+            <a style="float: right;">工时汇总：{$time3.all} 小时</a>
+        </h4>
+    </div>
+    <div id={$name.3} class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+            <table class="table table-bordered table-hover ">
+                <tr class="info ">
+                    <td>姓名</td>
+                    <td>打卡日期</td>
+                    <td>打卡时间</td>
+                    <td>上班时间</td>
+                    <td>工时 /小时</td>
+                </tr>
+                {volist name="time3" id="vi"}
+                <tr>
+                    <td>{$vi.name}</td>
+                    <td>{$vi.date}</td>
+                    <td>{$vi.time}</td>
+                    <td>{$vi.period}</td>
+                    <td>{$vi.working}</td>
+                </tr>
+                {/volist}
+            </table>
+    </div>
+</div>
+<div class="panel panel-info">
+    <div class="panel-heading" role="tab" >
+        <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href=#{$name.4} aria-expanded="true" aria-controls="collapseOne">
+               {$name.4}
+            </a>
+            <a style="float: right;">工时汇总：{$time4.all} 小时</a>
+        </h4>
+    </div>
+    <div id={$name.4} class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+            <table class="table table-bordered table-hover ">
+                <tr class="info ">
+                    <td>姓名</td>
+                    <td>打卡日期</td>
+                    <td>打卡时间</td>
+                    <td>上班时间</td>
+                    <td>工时 /小时</td>
+                </tr>
+                {volist name="time4" id="vi"}
+                <tr>
+                    <td>{$vi.name}</td>
+                    <td>{$vi.date}</td>
+                    <td>{$vi.time}</td>
+                    <td>{$vi.period}</td>
+                    <td>{$vi.working}</td>
+                </tr>
+                {/volist}
+            </table>
+    </div>
+</div>
+<div class="panel panel-info">
+    <div class="panel-heading" role="tab" >
+        <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href=#{$name.5} aria-expanded="true" aria-controls="collapseOne">
+               {$name.5}
+            </a>
+            <a style="float: right;">工时汇总：{$time5.all} 小时</a>
+        </h4>
+    </div>
+    <div id={$name.5} class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+            <table class="table table-bordered table-hover ">
+                <tr class="info ">
+                    <td>姓名</td>
+                    <td>打卡日期</td>
+                    <td>打卡时间</td>
+                    <td>上班时间</td>
+                    <td>工时 /小时</td>
+                </tr>
+                {volist name="time5" id="vi"}
+                <tr>
+                    <td>{$vi.name}</td>
+                    <td>{$vi.date}</td>
+                    <td>{$vi.time}</td>
+                    <td>{$vi.period}</td>
+                    <td>{$vi.working}</td>
+                </tr>
+                {/volist}
+            </table>
+    </div>
+</div>
+<div class="panel panel-info">
+    <div class="panel-heading" role="tab" >
+        <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href=#{$name.6} aria-expanded="true" aria-controls="collapseOne">
+               {$name.6}
+            </a>
+            <a style="float: right;">工时汇总：{$time6.all} 小时</a>
+        </h4>
+    </div>
+    <div id={$name.6} class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+            <table class="table table-bordered table-hover ">
+                <tr class="info ">
+                    <td>姓名</td>
+                    <td>打卡日期</td>
+                    <td>打卡时间</td>
+                    <td>上班时间</td>
+                    <td>工时 /小时</td>
+                </tr>
+                {volist name="time6" id="vi"}
+                <tr>
+                    <td>{$vi.name}</td>
+                    <td>{$vi.date}</td>
+                    <td>{$vi.time}</td>
+                    <td>{$vi.period}</td>
+                    <td>{$vi.working}</td>
+                </tr>
+                {/volist}
+            </table>
+    </div>
+</div>
+<div class="panel panel-info">
+    <div class="panel-heading" role="tab" >
+        <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href=#{$name.7} aria-expanded="true" aria-controls="collapseOne">
+               {$name.7}
+            </a>
+            <a style="float: right;">工时汇总：{$time7.all} 小时</a>
+        </h4>
+    </div>
+    <div id={$name.7} class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+            <table class="table table-bordered table-hover ">
+                <tr class="info ">
+                    <td>姓名</td>
+                    <td>打卡日期</td>
+                    <td>打卡时间</td>
+                    <td>上班时间</td>
+                    <td>工时 /小时</td>
+                </tr>
+                {volist name="time7" id="vi"}
+                <tr>
+                    <td>{$vi.name}</td>
+                    <td>{$vi.date}</td>
+                    <td>{$vi.time}</td>
+                    <td>{$vi.period}</td>
+                    <td>{$vi.working}</td>
+                </tr>
+                {/volist}
+            </table>
+    </div>
+</div>
+<div class="panel panel-info">
+    <div class="panel-heading" role="tab" >
+        <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href=#{$name.8} aria-expanded="true" aria-controls="collapseOne">
+               {$name.8}
+            </a>
+            <a style="float: right;">工时汇总：{$time8.all} 小时</a>
+        </h4>
+    </div>
+    <div id={$name.8} class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+            <table class="table table-bordered table-hover ">
+                <tr class="info ">
+                    <td>姓名</td>
+                    <td>打卡日期</td>
+                    <td>打卡时间</td>
+                    <td>上班时间</td>
+                    <td>工时 /小时</td>
+                </tr>
+                {volist name="time8" id="vi"}
+                <tr>
+                    <td>{$vi.name}</td>
+                    <td>{$vi.date}</td>
+                    <td>{$vi.time}</td>
+                    <td>{$vi.period}</td>
+                    <td>{$vi.working}</td>
+                </tr>
+                {/volist}
+            </table>
+    </div>
+</div>
+<div class="panel panel-info">
+    <div class="panel-heading" role="tab" >
+        <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href=#{$name.9} aria-expanded="true" aria-controls="collapseOne">
+               {$name.9}
+            </a>
+            <a style="float: right;">工时汇总：{$time9.all} 小时</a>
+        </h4>
+    </div>
+    <div id={$name.9} class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+            <table class="table table-bordered table-hover ">
+                <tr class="info ">
+                    <td>姓名</td>
+                    <td>打卡日期</td>
+                    <td>打卡时间</td>
+                    <td>上班时间</td>
+                    <td>工时 /小时</td>
+                </tr>
+                {volist name="time9" id="vi"}
+                <tr>
+                    <td>{$vi.name}</td>
+                    <td>{$vi.date}</td>
+                    <td>{$vi.time}</td>
+                    <td>{$vi.period}</td>
+                    <td>{$vi.working}</td>
+                </tr>
+                {/volist}
+            </table>
+    </div>
+</div>
+
+
+{include file="common/footer" /}

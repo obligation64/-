@@ -1,0 +1,22 @@
+{include file="common/emp_header" title="$title" /}
+<div id="body">
+    <h1>今天是:{$date}</h1>
+    <div class="form-group">
+        <form role="form" action="{:url('sign_in')}" method="post">
+            <label for="mm">选择签到日期：</label>
+            <input type="date" class="form-control" name="date" value={$date}>
+            <label for="mm">选择签到时间:</label>
+            <select class="input" name="period" >
+                <option value="1" {if condition="($period == 1)"} selected {/if}}>{$part1}</option>
+                <option value="2" {if condition="($period == 2)"} selected {/if}}>{$part2}</option>
+                <option value="3" {if condition="($period == 3)"} selected {/if}}>{$part3}</option>
+                <option value="4" {if condition="($period == 4)"} selected {/if}}>{$part4}</option>
+                <option value="5" {if condition="($period == 5)"} selected {/if}}>{$part5}</option>
+                <option value="6" {if condition="($period == 6)"} selected {/if}}>{$part6}</option>
+            </select>
+            <hr class="space">
+            <button type="submit" class="btn btn-primary btn-block">签到</button>
+        </form>
+    </div>
+</div>
+{include file="common/footer" /}

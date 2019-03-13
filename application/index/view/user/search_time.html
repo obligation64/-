@@ -1,0 +1,25 @@
+{include file="common/emp_header" title="$title" /}
+<div id="body">
+    <table class="table table-bordered table-hover ">
+        <tr class="info ">
+            <td>姓名</td>
+            <td>打卡日期</td>
+            <td>打卡时间</td>
+            <td>上班时间</td>
+            <td>工时 /小时</td>
+        </tr>
+        {volist name="time" id="vo"}
+        <tr>
+            <td>{$vo.name}</td>
+            <td>{$vo.date}</td>
+            <td>{$vo.time}</td>
+            <td>{$vo.period}</td>
+            <td>{$vo.working}</td>
+        </tr>
+        {/volist}
+    </table>
+    <p class="">
+        工时汇总:{$all}小时
+    </p>
+</div>
+{include file="common/footer" /}
