@@ -10,6 +10,9 @@
     <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/pintuer.js"></script>
+    <script src="/js/login.js"></script>
+
+
     <style type="text/css">
         [v-cloak]{
             display: none;
@@ -36,51 +39,61 @@
 </head>
 <body>
 <!--<div class="banner x3" style="width: 500px;height: 250px;">-->
-    <!--<div class="carousel">-->
-        <!--<div class="item">-->
-            <!--<img src="/images/lunbo1.jpg" alt=""></div>-->
-        <!--<div class="item">-->
-            <!--<img src="/images/lunbo2.jpg" alt="">-->
-        <!--</div>-->
-        <!--<div class="item">-->
-            <!--<img src="/images/lunbo3.jpg" alt="">-->
-        <!--</div>-->
-    <!--</div>-->
+<!--<div class="carousel">-->
+<!--<div class="item">-->
+<!--<img src="/images/lunbo1.jpg" alt=""></div>-->
+<!--<div class="item">-->
+<!--<img src="/images/lunbo2.jpg" alt="">-->
+<!--</div>-->
+<!--<div class="item">-->
+<!--<img src="/images/lunbo3.jpg" alt="">-->
+<!--</div>-->
+<!--</div>-->
 <!--</div>-->
 
 <div  class="" align="center" style="margin-top: 200px">
-    <form action="{:url('login_check')}" method="post">
+    <form action="{:url('register_check')}" method="post">
         <div class="panel padding" style="width: 450px;text-align: left;">
             <div class="text-center ">
                 <br>
-                <h2><strong>欢迎使用</strong></h2></div>
+                <h2><strong>欢迎注册</strong></h2></div>
             <div class="" style="padding:30px;">
                 <div class="form-group">
                     <div class="field field-icon-right">
-                        <input type="text" class="input" name="num" placeholder="学号" />
+                        <input  type="text" class="input" name="num" placeholder="学号" onblur="check(this.value)" />
                         <span class="icon icon-user"></span>
+                        <span id="num"></span>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="field field-icon-right">
-                        <input type="password" class="input" name="password" placeholder="登录密码" />
+                        <input id="password" type="password" class="input pwd" name="password" placeholder="登录密码" onblur="checkpwd(this.value)" />
                         <span class="icon icon-key"></span>
+                        <span id="pwd"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="field field-icon-right">
+                        <input id="repassword" type="password" class="input pwd" name="repassword" placeholder="确认密码" onblur="repwd(this.value)" />
+                        <span class="icon icon-key"></span>
+                        <span id="repwd"></span>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="field">
-                        <input type="text" class="input" name="captcha" placeholder="填写右侧的验证码" />
-                        <img class="passcode" src="{:url('show_captcha')}"  alt="captcha" onclick="this.src=this.src"+'?' />
+                        <input type="text" class="input" name="captcha" placeholder="填写右侧的验证码" data-validate="required:验证码不能为空" />
+                        <!--<img class="passcode" src="{:url('show_captcha')}"  alt="captcha" onclick="this.src=this.src"+'?' />-->
+                        <img class="passcode" src="{:captcha_src()}"  alt="captcha" onclick="this.src=this.src"+'?' />
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="field">
-                        <button class="button button-block bg-main text-big">立即登录</button>
+                        <button class="button button-block bg-main text-big">立即注册</button>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="field text-center">
-                        <p class="text-muted text-center"> <a class="" href="#login.html"><small>忘记密码了？</small></a> | <a class="" href="{:url('register')}">注册新账号</a>
+                        <p class="text-muted text-center"> <a class="" href="#login.html"><small>忘记密码了？</small></a> | <a class="" href="{:url('index')}">已有账号，直接登录</a>
                         </p>
                     </div>
                 </div>
